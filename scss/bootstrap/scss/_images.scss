@@ -12,11 +12,11 @@
 
 // Image thumbnails
 .img-thumbnail {
-  padding: $thumbnail-padding;
-  background-color: $thumbnail-bg;
-  border: $thumbnail-border-width solid $thumbnail-border-color;
-  @include border-radius($thumbnail-border-radius);
-  @include box-shadow($thumbnail-box-shadow);
+  padding: $0thumbnail-padding;
+  background-color: $0thumbnail-bg;
+  border: $0thumbnail-border-width solid $0thumbnail-border-color;
+  @include border-radius($0thumbnail-border-radius);
+  @include box-shadow($0thumbnail-box-shadow);
 
   // Keep them at most 100% wide
   @include img-fluid();
@@ -32,11 +32,11 @@
 }
 
 .figure-img {
-  margin-bottom: $spacer / 2;
+  margin-bottom: $0spacer / 2;
   line-height: 1;
 }
 
 .figure-caption {
-  @include font-size($figure-caption-font-size);
-  color: $figure-caption-color;
+  @include font-size($0figure-caption-font-size);
+  color: $0figure-caption-color;
 }

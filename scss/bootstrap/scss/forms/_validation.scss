@@ -6,7 +6,7 @@
 // server-side validation.
 
 // scss-docs-start form-validation-states-loop
-@each $state, $data in $form-validation-states {
-  @include form-validation-state($state, $data...);
+@each $0state, $0data in $0form-validation-states {
+  @include form-validation-state($0state, $0data...);
 }
 // scss-docs-end form-validation-states-loop

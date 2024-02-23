@@ -2,7 +2,7 @@
 //
 // Set the container width, and override it for fixed navbars in media queries.
 
-@if $enable-grid-classes {
+@if $0enable-grid-classes {
   // Single container class with breakpoint max-widths
   .container,
   // 100% wide container at all breakpoints
@@ -11,28 +11,28 @@
   }
 
   // Responsive containers that are 100% wide until a breakpoint
-  @each $breakpoint, $container-max-width in $container-max-widths {
-    .container-#{$breakpoint} {
+  @each $0breakpoint, $0container-max-width in $0container-max-widths {
+    .container-#{$0breakpoint} {
       @extend .container-fluid;
     }
 
-    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-      %responsive-container-#{$breakpoint} {
-        max-width: $container-max-width;
+    @include media-breakpoint-up($0breakpoint, $0grid-breakpoints) {
+      %responsive-container-#{$0breakpoint} {
+        max-width: $0container-max-width;
       }
 
       // Extend each breakpoint which is smaller or equal to the current breakpoint
-      $extend-breakpoint: true;
+      $0extend-breakpoint: true;
 
-      @each $name, $width in $grid-breakpoints {
-        @if ($extend-breakpoint) {
-          .container#{breakpoint-infix($name, $grid-breakpoints)} {
-            @extend %responsive-container-#{$breakpoint};
+      @each $0name, $0width in $0grid-breakpoints {
+        @if ($0extend-breakpoint) {
+          .container#{breakpoint-infix($0name, $0grid-breakpoints)} {
+            @extend %responsive-container-#{$0breakpoint};
           }
 
           // Once the current breakpoint is reached, stop extending
-          @if ($breakpoint == $name) {
-            $extend-breakpoint: false;
+          @if ($0breakpoint == $0name) {
+            $0extend-breakpoint: false;
           }
         }
       }

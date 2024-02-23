@@ -5,7 +5,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: $zindex-fixed;
+  z-index: $0zindex-fixed;
 }
 
 .fixed-bottom {
@@ -13,18 +13,18 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $zindex-fixed;
+  z-index: $0zindex-fixed;
 }
 
 // Responsive sticky top
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $0breakpoint in map-keys($0grid-breakpoints) {
+  @include media-breakpoint-up($0breakpoint) {
+    $0infix: breakpoint-infix($0breakpoint, $0grid-breakpoints);
 
-    .sticky#{$infix}-top {
+    .sticky#{$0infix}-top {
       position: sticky;
       top: 0;
-      z-index: $zindex-sticky;
+      z-index: $0zindex-sticky;
     }
   }
 }

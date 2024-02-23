@@ -9,7 +9,7 @@
 @import "functions";
 @import "variables";
 // Prevent the usage of custom properties since we don't add them to `:root` in reboot
-$font-family-base: $font-family-sans-serif; // stylelint-disable-line scss/dollar-variable-default
-$font-family-code: $font-family-monospace; // stylelint-disable-line scss/dollar-variable-default
+$0font-family-base: $0font-family-sans-serif; // stylelint-disable-line scss/dollar-variable-default
+$0font-family-code: $0font-family-monospace; // stylelint-disable-line scss/dollar-variable-default
 @import "mixins";
 @import "reboot";

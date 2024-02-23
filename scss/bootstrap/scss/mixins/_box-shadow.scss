@@ -1,18 +1,18 @@
-@mixin box-shadow($shadow...) {
-  @if $enable-shadows {
-    $result: ();
+@mixin box-shadow($0shadow...) {
+  @if $0enable-shadows {
+    $0result: ();
 
-    @each $value in $shadow {
-      @if $value != null {
-        $result: append($result, $value, "comma");
+    @each $0value in $0shadow {
+      @if $0value != null {
+        $0result: append($0result, $0value, "comma");
       }
-      @if $value == none and length($shadow) > 1 {
+      @if $0value == none and length($0shadow) > 1 {
         @warn "The keyword 'none' must be used as a single argument.";
       }
     }
 
-    @if (length($result) > 0) {
-      box-shadow: $result;
+    @if (length($0result) > 0) {
+      box-shadow: $0result;
     }
   }
 }

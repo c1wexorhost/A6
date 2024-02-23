@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-$include-column-box-sizing: true !default;
+$0include-column-box-sizing: true !default;
 
 @import "functions";
 @import "variables";
@@ -24,8 +24,8 @@ $include-column-box-sizing: true !default;
 @import "utilities";
 // Only use the utilities we need
 // stylelint-disable-next-line scss/dollar-variable-default
-$utilities: map-get-multiple(
-  $utilities,
+$0utilities: map-get-multiple(
+  $0utilities,
   (
     "display",
     "order",

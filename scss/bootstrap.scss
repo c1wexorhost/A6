@@ -1,32 +1,32 @@
 /******* Customized Bootstrap ********/
 
-$primary: #2E2538;
-$secondary: #DCB342;
-$light: #F4F6F8;
-$dark: #45595B;
+$0primary: #2E2538;
+$0secondary: #DCB342;
+$0light: #F4F6F8;
+$0dark: #45595B;
 
-$font-family-base: 'Open Sans', sans-serif;
+$0font-family-base: 'Open Sans', sans-serif;
 
-$headings-font-family: 'Raleway', sans-serif;
+$0headings-font-family: 'Raleway', sans-serif;
 
-$body-color: #747d88;
+$0body-color: #747d88;
 
-$headings-color: $dark;
+$0headings-color: $0dark;
 
-$headings-font-weight: 600;
+$0headings-font-weight: 600;
 
-$display-font-weight: 800;
+$0display-font-weight: 800;
 
-$enable-responsive-font-sizes: true;
+$0enable-responsive-font-sizes: true;
 
-$border-radius: 10px;
+$0border-radius: 10px;
 
-$border-radius-sm: $border-radius;
+$0border-radius-sm: $0border-radius;
 
-$border-radius-lg: $border-radius;
+$0border-radius-lg: $0border-radius;
 
-$link-decoration: none;
+$0link-decoration: none;
 
-$enable-negative-margins: true;
+$0enable-negative-margins: true;
 
 @import "bootstrap/scss/bootstrap";

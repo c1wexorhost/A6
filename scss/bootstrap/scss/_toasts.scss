@@ -1,14 +1,14 @@
 .toast {
-  width: $toast-max-width;
+  width: $0toast-max-width;
   max-width: 100%;
-  @include font-size($toast-font-size);
-  color: $toast-color;
+  @include font-size($0toast-font-size);
+  color: $0toast-color;
   pointer-events: auto;
-  background-color: $toast-background-color;
+  background-color: $0toast-background-color;
   background-clip: padding-box;
-  border: $toast-border-width solid $toast-border-color;
-  box-shadow: $toast-box-shadow;
-  @include border-radius($toast-border-radius);
+  border: $0toast-border-width solid $0toast-border-color;
+  box-shadow: $0toast-box-shadow;
+  @include border-radius($0toast-border-radius);
 
   &:not(.showing):not(.show) {
     opacity: 0;
@@ -25,27 +25,27 @@
   pointer-events: none;
 
   > :not(:last-child) {
-    margin-bottom: $toast-spacing;
+    margin-bottom: $0toast-spacing;
   }
 }
 
 .toast-header {
   display: flex;
   align-items: center;
-  padding: $toast-padding-y $toast-padding-x;
-  color: $toast-header-color;
-  background-color: $toast-header-background-color;
+  padding: $0toast-padding-y $0toast-padding-x;
+  color: $0toast-header-color;
+  background-color: $0toast-header-background-color;
   background-clip: padding-box;
-  border-bottom: $toast-border-width solid $toast-header-border-color;
-  @include border-top-radius(subtract($toast-border-radius, $toast-border-width));
+  border-bottom: $0toast-border-width solid $0toast-header-border-color;
+  @include border-top-radius(subtract($0toast-border-radius, $0toast-border-width));
 
   .btn-close {
-    margin-right: $toast-padding-x / -2;
-    margin-left: $toast-padding-x;
+    margin-right: $0toast-padding-x / -2;
+    margin-left: $0toast-padding-x;
   }
 }
 
 .toast-body {
-  padding: $toast-padding-x; // apply to both vertical and horizontal
+  padding: $0toast-padding-x; // apply to both vertical and horizontal
   word-wrap: break-word;
 }

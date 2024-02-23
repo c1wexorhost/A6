@@ -1,6 +1,6 @@
 // scss-docs-start mixin-color-scheme
-@mixin color-scheme($name) {
-  @media (prefers-color-scheme: #{$name}) {
+@mixin color-scheme($0name) {
+  @media (prefers-color-scheme: #{$0name}) {
     @content;
   }
 }

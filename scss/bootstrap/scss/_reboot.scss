@@ -26,9 +26,9 @@
 // null by default, thus nothing is generated.
 
 :root {
-  font-size: $font-size-root;
+  font-size: $0font-size-root;
 
-  @if $enable-smooth-scroll {
+  @if $0enable-smooth-scroll {
     @media (prefers-reduced-motion: no-preference) {
       scroll-behavior: smooth;
     }
@@ -45,15 +45,15 @@
 
 body {
   margin: 0; // 1
-  font-family: $font-family-base;
-  @include font-size($font-size-base);
-  font-weight: $font-weight-base;
-  line-height: $line-height-base;
-  color: $body-color;
-  text-align: $body-text-align;
-  background-color: $body-bg; // 2
+  font-family: $0font-family-base;
+  @include font-size($0font-size-base);
+  font-weight: $0font-weight-base;
+  line-height: $0line-height-base;
+  color: $0body-color;
+  text-align: $0body-text-align;
+  background-color: $0body-bg; // 2
   -webkit-text-size-adjust: 100%; // 3
-  -webkit-tap-highlight-color: rgba($black, 0); // 4
+  -webkit-tap-highlight-color: rgba($0black, 0); // 4
 }
 
 
@@ -63,15 +63,15 @@ body {
 // 2. Set correct height and prevent the `size` attribute to make the `hr` look like an input field
 
 hr {
-  margin: $hr-margin-y 0;
-  color: $hr-color; // 1
+  margin: $0hr-margin-y 0;
+  color: $0hr-color; // 1
   background-color: currentColor;
   border: 0;
-  opacity: $hr-opacity;
+  opacity: $0hr-opacity;
 }
 
 hr:not([size]) {
-  height: $hr-height; // 2
+  height: $0hr-height; // 2
 }
 
 
@@ -83,42 +83,42 @@ hr:not([size]) {
 
 %heading {
   margin-top: 0; // 1
-  margin-bottom: $headings-margin-bottom;
-  font-family: $headings-font-family;
-  font-style: $headings-font-style;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
-  color: $headings-color;
+  margin-bottom: $0headings-margin-bottom;
+  font-family: $0headings-font-family;
+  font-style: $0headings-font-style;
+  font-weight: $0headings-font-weight;
+  line-height: $0headings-line-height;
+  color: $0headings-color;
 }
 
 h1 {
   @extend %heading;
-  @include font-size($h1-font-size);
+  @include font-size($0h1-font-size);
 }
 
 h2 {
   @extend %heading;
-  @include font-size($h2-font-size);
+  @include font-size($0h2-font-size);
 }
 
 h3 {
   @extend %heading;
-  @include font-size($h3-font-size);
+  @include font-size($0h3-font-size);
 }
 
 h4 {
   @extend %heading;
-  @include font-size($h4-font-size);
+  @include font-size($0h4-font-size);
 }
 
 h5 {
   @extend %heading;
-  @include font-size($h5-font-size);
+  @include font-size($0h5-font-size);
 }
 
 h6 {
   @extend %heading;
-  @include font-size($h6-font-size);
+  @include font-size($0h6-font-size);
 }
 
 
@@ -129,7 +129,7 @@ h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: $paragraph-margin-bottom;
+  margin-bottom: $0paragraph-margin-bottom;
 }
 
 
@@ -179,7 +179,7 @@ ul ol {
 }
 
 dt {
-  font-weight: $dt-font-weight;
+  font-weight: $0dt-font-weight;
 }
 
 // 1. Undo browser default
@@ -203,7 +203,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: $font-weight-bolder;
+  font-weight: $0font-weight-bolder;
 }
 
 
@@ -212,15 +212,15 @@ strong {
 // Add the correct font size in all browsers
 
 small {
-  @include font-size($small-font-size);
+  @include font-size($0small-font-size);
 }
 
 
 // Mark
 
 mark {
-  padding: $mark-padding;
-  background-color: $mark-bg;
+  padding: $0mark-padding;
+  background-color: $0mark-bg;
 }
 
 
@@ -232,7 +232,7 @@ mark {
 sub,
 sup {
   position: relative;
-  @include font-size($sub-sup-font-size);
+  @include font-size($0sub-sup-font-size);
   line-height: 0;
   vertical-align: baseline;
 }
@@ -244,12 +244,12 @@ sup { top: -.5em; }
 // Links
 
 a {
-  color: $link-color;
-  text-decoration: $link-decoration;
+  color: $0link-color;
+  text-decoration: $0link-decoration;
 
   &:hover {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    color: $0link-hover-color;
+    text-decoration: $0link-hover-decoration;
   }
 }
 
@@ -273,7 +273,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: $font-family-code;
+  font-family: $0font-family-code;
   @include font-size(1em); // Correct the odd `em` font sizing in all browsers.
   direction: ltr #{"/* rtl:ignore */"};
   unicode-bidi: bidi-override;
@@ -288,8 +288,8 @@ pre {
   margin-top: 0; // 1
   margin-bottom: 1rem; // 2
   overflow: auto; // 3
-  @include font-size($code-font-size);
-  color: $pre-color;
+  @include font-size($0code-font-size);
+  color: $0pre-color;
 
   // Account for some code outputs that place code tags in pre tags
   code {
@@ -300,8 +300,8 @@ pre {
 }
 
 code {
-  @include font-size($code-font-size);
-  color: $code-color;
+  @include font-size($0code-font-size);
+  color: $0code-color;
   word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more
@@ -311,16 +311,16 @@ code {
 }
 
 kbd {
-  padding: $kbd-padding-y $kbd-padding-x;
-  @include font-size($kbd-font-size);
-  color: $kbd-color;
-  background-color: $kbd-bg;
-  @include border-radius($border-radius-sm);
+  padding: $0kbd-padding-y $0kbd-padding-x;
+  @include font-size($0kbd-font-size);
+  color: $0kbd-color;
+  background-color: $0kbd-bg;
+  @include border-radius($0border-radius-sm);
 
   kbd {
     padding: 0;
     @include font-size(1em);
-    font-weight: $nested-kbd-font-weight;
+    font-weight: $0nested-kbd-font-weight;
   }
 }
 
@@ -352,9 +352,9 @@ table {
 }
 
 caption {
-  padding-top: $table-cell-padding-y;
-  padding-bottom: $table-cell-padding-y;
-  color: $table-caption-color;
+  padding-top: $0table-cell-padding-y;
+  padding-bottom: $0table-cell-padding-y;
+  color: $0table-caption-color;
   text-align: left;
 }
 
@@ -363,7 +363,7 @@ caption {
 // 3. Fix alignment for Safari
 
 th {
-  font-weight: $table-th-font-weight; // 1
+  font-weight: $0table-th-font-weight; // 1
   text-align: inherit; // 2
   text-align: -webkit-match-parent; // 3
 }
@@ -459,7 +459,7 @@ button,
 [type="submit"] {
   -webkit-appearance: button; // 2
 
-  @if $enable-button-pointers {
+  @if $0enable-button-pointers {
     &:not(:disabled) {
       cursor: pointer; // 3
     }
@@ -502,9 +502,9 @@ legend {
   float: left; // 1
   width: 100%;
   padding: 0;
-  margin-bottom: $legend-margin-bottom;
-  @include font-size($legend-font-size);
-  font-weight: $legend-font-weight;
+  margin-bottom: $0legend-margin-bottom;
+  @include font-size($0legend-font-size);
+  font-weight: $0legend-font-weight;
   line-height: inherit;
 
   + * {

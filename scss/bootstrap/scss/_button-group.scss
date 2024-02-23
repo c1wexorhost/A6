@@ -37,7 +37,7 @@
   // Prevent double borders when buttons are next to each other
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) {
-    margin-left: -$btn-border-width;
+    margin-left: -$0btn-border-width;
   }
 
   // Reset rounded corners
@@ -70,8 +70,8 @@
 //
 
 .dropdown-toggle-split {
-  padding-right: $btn-padding-x * .75;
-  padding-left: $btn-padding-x * .75;
+  padding-right: $0btn-padding-x * .75;
+  padding-left: $0btn-padding-x * .75;
 
   &::after,
   .dropup &::after,
@@ -85,20 +85,20 @@
 }
 
 .btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .75;
-  padding-left: $btn-padding-x-sm * .75;
+  padding-right: $0btn-padding-x-sm * .75;
+  padding-left: $0btn-padding-x-sm * .75;
 }
 
 .btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .75;
-  padding-left: $btn-padding-x-lg * .75;
+  padding-right: $0btn-padding-x-lg * .75;
+  padding-left: $0btn-padding-x-lg * .75;
 }
 
 
 // The clickable button for toggling the menu
 // Set the same inset shadow as the :active state
 .btn-group.show .dropdown-toggle {
-  @include box-shadow($btn-active-box-shadow);
+  @include box-shadow($0btn-active-box-shadow);
 
   // Show no shadow for `.btn-link` since it has no other button styles.
   &.btn-link {
@@ -123,7 +123,7 @@
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) {
-    margin-top: -$btn-border-width;
+    margin-top: -$0btn-border-width;
   }
 
   // Reset rounded corners
