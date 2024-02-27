@@ -1,4 +1,15 @@
 
+@media only screen and (max-width: 900px) {
+    .owl-prev {
+        display: none;
+    }
+    .owl-next{
+        display: none;
+    }
+}
+
+
+
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
