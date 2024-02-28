@@ -230,7 +230,9 @@
 
 .page-header {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/new/banner.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/banner.jpg) no-repeat fixed;
+    /* background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)), url("/images/banner.jpg") no-repeat fixed; */
+    /* background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)), url("/images/banner.jpg") no-repeat fixed; */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
