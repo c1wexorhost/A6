@@ -78,7 +78,7 @@
     });
 
 
-    // vegetable carousel
+    // item carousel
     $0(".vegetable-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1500,
