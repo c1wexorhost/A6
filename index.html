@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>FIT 4 KITCHEN</title>
+        <link rel="icon" href="logo/22222.png">
+
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/f31bf7b6cc.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid fixed-top">
+            <div class="container topbar bg-primary d-none d-lg-block">
+                <div class="d-flex justify-content-between">
+                    <div class="top-info ps-2">
+                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">Sharjha media city, Sharjah UAE</a></small>
+                        <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white"> info@fit4kitchen.in</a></small>
+                    </div>
+                    <div class="top-link pe-2">
+                        <!-- <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
+                        <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
+                        <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="container px-0">
+                <nav class="navbar navbar-light bg-white navbar-expand-xl">
+                    <a href="index.html" class="navbar-brand"><img src="logo/1111.png" alt="" style="object-fit: cover; width: 200px; height: 100px;"></a>
+                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-white" id="navbarCollapse" >
+                        <div class="navbar-nav mx-auto">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="products.html" class="nav-item nav-link " >Shop</a>
+                            <a href="about.html" class="nav-item nav-link">About Us</a>
+                            
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+
+        <!-- Hero Start -->
+        <div class="container-fluid py-5 mb-5 hero-header">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-md-12 col-lg-7">
+                        <h4 class="mb-3" style="color:  #2E2538;">Smart Appliances and Technology</h4>
+                        <h1 class="mb-5 display-3 " style="color:#DCB342 ;">The kitchen is a Multifunctional Space</h1>
+                        <div class="position-relative mx-auto">
+                           <a href="contact.html"><button class="bt form-control border-2 b w-75 py-3 px-4 rounded-pill btn btn-primary border-2 bg-primary py-3 px-4 position-absolute rounded-pill text-white "
+                            type="submit" class="" style="top: 0; right: 25%;">Contact Us</button></a> <br>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-5">
+                        <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active rounded">
+                                    <img src="images/les/ab1.jpeg" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                                    <a href="#" class="btn px-4 py-2 text-white rounded">Cooking Line</a>
+                                </div>
+                                <div class="carousel-item rounded">
+                                    <img src="images/les/ab2.jpeg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                                    <a href="#" class="btn px-4 py-2 text-white rounded">Preperation Line</a>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+
+        <!-- Featurs Section Start -->
+        <div class="container-fluid featurs py-5">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-solid fa-star fa-3x text-white"></i>
+                                <i class=""></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Quality Assurance </h5>
+                                <p class="mb-0">Shop with confidence</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-user-shield fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Security Payment</h5>
+                                <p class="mb-0">100% security payment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fas fa-solid fa-certificate fa-3x text-white"></i>
+                                <!-- <i class="fa-solid fa-certificate"></i> -->
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>Authorized Dealer</h5>
+                                <p class="mb-0">Trusted Brand Dealer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="featurs-item text-center rounded bg-light p-4">
+                            <div class="featurs-icon btn-square rounded-circle bg-secondary mb-5 mx-auto">
+                                <i class="fa fa-phone-alt fa-3x text-white"></i>
+                            </div>
+                            <div class="featurs-content text-center">
+                                <h5>24/7 Support</h5>
+                                <p class="mb-0">Support every time fast</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featurs Section End -->
+
+
+        <!-- Fruits Shop Start-->
+       
+
+
+        <!-- Featurs Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="service-item bg-primary rounded border border-primary">
+                                <img src="images/new/ab3.jpeg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-secondary text-center p-4 rounded">
+                                        <!-- <h5 class="text-white">OVEN</h5> -->
+                                        <h3 class="mb-0">Commercial Kitchen Equipments</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="service-item bg-dark rounded border border-dark">
+                                <img src="images/new/ab4.png" class="img-fluid rounded-top w-100" alt="">
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-light text-center p-4 rounded">
+                                        <!-- <h5 class="text-primary">GRILL</h5> -->
+                                        <h3 class="mb-0">Stainless Steel Fabrication</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="service-item bg-primary rounded border border-primary">
+                                <img src="images/new/ab5.png"class="img-fluid rounded-top w-100" alt="">
+                                <div class="px-4 rounded-bottom">
+                                    <div class="service-content bg-secondary text-center p-4 rounded">
+                                        <!-- <h5 class="text-white">Coffee Machine</h5> -->
+                                        <h3 class="mb-0">Butchery Equipments</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featurs End -->
+
+
+        <!-- Vesitable Shop Start-->
+       
+        <!-- Vesitable Shop End -->
+
+
+        <!-- Banner Section Start-->
+        <div class="container-fluid banner bg-secondary my-5">
+            <div class="container py-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="py-4">
+                            <h1 class="display-3 text-white">High Quality Equipments</h1>
+                            <p class="fw-normal display-3 text-dark mb-4">in Our Store</p>
+                            <p class="mb-4 text-dark">Whether you're a seasoned grill master or a novice, having the right equipment can make all the difference in achieving delicious results. </p>
+                            <a href="#" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <img src="images/new/im3.jpg" class="img-fluid w-100 rounded" alt="">
+                            <!-- <div class="d-flex align-items-center justify-content-center bg-white rounded-circle position-absolute" style="width: 140px; height: 140px; top: 0; left: 0;">
+                                <h1 style="font-size: 100px;">1</h1>
+                                <div class="d-flex flex-column">
+                                    <span class="h2 mb-0">50$0</span>
+                                    <span class="h4 text-muted mb-0">kg</span>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner Section End -->
+
+
+        <!-- Bestsaler Product Start -->
+        <div class="container-fluid py-5">
+            <div class="container py-5 text-center">
+                <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                    <h1 class="display-4">Bestseller Products</h1>
+                    <p>Each type has its own advantages and unique flavor profiles. Gas grills offer convenience and precise temperature control, while charcoal grills provide that classic smoky flavor.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-light">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="images/les/new/bakary/Bread Slicer.png" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5">Bread Slicer</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <!-- <h4 class="mb-3"> $0</h4> -->
+                                    <a href="https://wa.me/+971582908151/?text=Hi,I%20want%20to%20know%20more%20about%20%0aBread%20Slicer" class="btn border border-secondary rounded-pill px-3 text-primary" ><i class="fa-brands fa-whatsapp me-2 text-primary"></i> Connect</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-light">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="images/les/new/cooking line/Cooking range.png" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5">Cooking Range</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <!-- <h4 class="mb-3"> $0</h4> -->
+                                    <a href="https://wa.me/+971582908151/?text=Hi,I%20want%20to%20know%20more%20about%20%0aCooking Range" class="btn border border-secondary rounded-pill px-3 text-primary" ><i class="fa-brands fa-whatsapp me-2 text-primary"></i> Connect</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-light">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="images/les/new/oven/Bakery ovens.png" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5">Bakery Oven</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <!-- <h4 class="mb-3"> $0</h4> -->
+                                    <a href="https://wa.me/+971582908151/?text=Hi,I%20want%20to%20know%20more%20about%20%0aCooking Range" class="btn border border-secondary rounded-pill px-3 text-primary" ><i class="fa-brands fa-whatsapp me-2 text-primary"></i> Connect</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-light">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="images/les/new/preparation line/Blenders.png" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5">Blenders</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <!-- <h4 class="mb-3"> $0</h4> -->
+                                    <a href="https://wa.me/+971582908151/?text=Hi,I%20want%20to%20know%20more%20about%20%0aBlenders" class="btn border border-secondary rounded-pill px-3 text-primary" ><i class="fa-brands fa-whatsapp me-2 text-primary"></i> Connect</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-light">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="images/les/new/refrigeration/Blast chillers.png" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5">Blast chillers</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <!-- <h4 class="mb-3"> $0</h4> -->
+                                    <a href="https://wa.me/+971582908151/?text=Hi,I%20want%20to%20know%20more%20about%20%0aBlast%20Chillers" class="btn border border-secondary rounded-pill px-3 text-primary" ><i class="fa-brands fa-whatsapp me-2 text-primary"></i> Connect</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="p-4 rounded bg-light">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <img src="images/les/new/refrigeration/saladette chiller.png" class="img-fluid rounded-circle w-100" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="h5">Saladette Chiller</a>
+                                    <div class="d-flex my-3">
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <!-- <h4 class="mb-3"> $0</h4> -->
+                                    <a href="https://wa.me/+971582908151/?text=Hi,I%20want%20to%20know%20more%20about%20%0aSaladtte%20Chiller" class="btn border border-secondary rounded-pill px-3 text-primary" ><i class="fa-brands fa-whatsapp me-2 text-primary"></i> Connect</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="text-center">
+                            <img src="images/les/new/preparation line/Coffee Machine.png" class="img-fluid rounded" alt="">
+                            <div class="py-4">
+                                <a href="#" class="h5">Coffee Machine</a>
+                                <div class="d-flex my-3 justify-content-center">
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <!-- <h4 class="mb-3"> $0</h4> -->
+                                <a href="https://wa.me/+971582908151/?text=Hi,I%20want%20to%20know%20more%20about%20%0aCoffee%20Machine" class="btn border border-secondary rounded-pill px-3 text-primary" ><i class="fa-brands fa-whatsapp me-2 text-primary"></i> Connect</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="text-center">
+                            <img src="images/les/new/oven/Unox ovens.png" class="img-fluid rounded" alt="">
+                            <div class="py-4">
+                                <a href="#" class="h5">Unox Oven<a>
+                                <div class="d-flex my-3 justify-content-center">
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <!-- <h4 class="mb-3"> $0</h4> -->
+                                <a href="https://wa.me/+971582908151/?text=Hi,I%20want%20to%20know%20more%20about%20%0aUnox%20Oven" class="btn border border-secondary rounded-pill px-3 text-primary" ><i class="fa-brands fa-whatsapp me-2 text-primary"></i> Connect</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="text-center">
+                            <img src="images/les/new/cooking line/Lava stone grill.png" class="img-fluid rounded" alt="">
+                            <div class="py-4">
+                                <a href="#" class="h5">Lava Stone Grill</a>
+                                <div class="d-flex my-3 justify-content-center">
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <!-- <h4 class="mb-3"> $0</h4> -->
+                                <a href="https://wa.me/+971582908151/?text=Hi,I%20want%20to%20know%20more%20about%20%0aLava%20Stone%20Grill" class="btn border border-secondary rounded-pill px-3 text-primary" ><i class="fa-brands fa-whatsapp me-2 text-primary"></i> Connect</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="text-center">
+                            <img src="images/les/new/bakary/Dough roller.png" class="img-fluid rounded" alt="">
+                            <div class="py-2">
+                                <a href="#" class="h5">Dough Roller</a>
+                                <div class="d-flex my-3 justify-content-center">
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star text-primary"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <!-- <h4 class="mb-3"> $0</h4> -->
+                                <a href="https://wa.me/+971582908151/?text=Hi,I%20want%20to%20know%20more%20about%20%0aDough%20Roller" class="btn border border-secondary rounded-pill px-3 text-primary" ><i class="fa-brands fa-whatsapp me-2 text-primary"></i> Connect</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="products.html" class="btn border-secondary py-2 px-4 rounded-pill text-light mg-12 bg-primary" > More Products</a>
+
+            </div>
+
+        </div>
+        <!-- Bestsaler Product End -->
+
+
+        
+
+
+        <!-- Tastimonial Start -->
+        <div class="container-fluid testimonial py-5">
+            <div class="container py-5">
+                <div class="testimonial-header text-center">
+                    <h4 class="text-primary">Our Testimonial</h4>
+                    <h1 class="display-5 mb-5 text-dark">Our Client Saying!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                        <div class="position-relative">
+                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
+                            <div class="mb-4 pb-4 border-bottom border-secondary">
+                                <p class="mb-0">Operating the Fit for Kitchen toaster is a breeze, thanks to its intuitive controls and user-friendly design. Simply select your desired setting, insert your bread, nd let the toaster work its magic.   
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center flex-nowrap">
+                                <div class="bg-secondary rounded">
+                                    <img src="images/les/pep.png" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                </div>
+                                <div class="ms-4 d-block">
+                                    <h4 class="text-dark">Musthafa</h4>
+                                    <!-- <p class="m-0 pb-3">Profession</p> -->
+                                    <div class="d-flex pe-5">
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                        <div class="position-relative">
+                            <i class="fa fa-quote-right  text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
+                            <div class="mb-4 pb-4 border-bottom border-secondary">
+                                <p class="mb-0"> Elevate your breakfast routine with the Fit for Kitchen toaster, a sleek and reliable appliance designed to make your mornings easier and more enjoyable.
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center flex-nowrap">
+                                <div class="bg-secondary rounded">
+                                    <img src="images/les/pep.png" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                </div>
+                                <div class="ms-4 d-block">
+                                    <h4 class="text-dark">Shibin Fayis</h4>
+                                    <!-- <p class="m-0 pb-3">Profession</p> -->
+                                    <div class="d-flex pe-5">
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
+                        <div class="position-relative">
+                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
+                            <div class="mb-4 pb-4 border-bottom border-secondary">
+                                <p class="mb-0">Experience the refreshing taste of freshly squeezed juice with the Fit for Kitchen Juicer, an indispensable appliance for health-conscious individuals and juice enthusiasts alike.
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center flex-nowrap">
+                                <div class="bg-secondary rounded">
+                                    <img src="images/les/pep.png" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
+                                </div>
+                                <div class="ms-4 d-block">
+                                    <h4 class="text-dark">Sadiq Ali</h4>
+                                    <!-- <p class="m-0 pb-3">Profession</p> -->
+                                    <div class="d-flex pe-5">
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                        <i class="fas fa-star text-primary"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tastimonial End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+            <div class="container py-5">
+                <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
+                    <div class="row g-4">
+                        <div class="col-lg-3">
+                            
+                    <img src="logo/LOGO_WITH_OUT_BG.png" alt="" style="width: 150px; height: 120px;">
+                                
+                            
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-relative mx-auto">
+                                <!-- <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="text" placeholder="Your Email">
+                                <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="d-flex justify-content-end pt-3">
+                                <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=" https://www.instagram.com/fit4kitchen_?igsh=MTg1a2c1bHpxZm01cg%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Why People Like us!</h4>
+                            <p class="mb-4">Discover our showroom, where tech meets style. Find kitchen essentials and laundry must-haves blending functionality and flair to suit every need.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Links</h4>
+                            <a class="btn-link" href="about.html">About Us</a>
+                            <a class="btn-link" href="products.html">Products</a>
+                            <a class="btn-link" href="contact.html">Contact Us</a>
+                            <!-- <a class="btn-link" href="">Terms & Condition</a> -->
+                            <!-- <a class="btn-link" href="">Return Policy</a> -->
+                            <!-- <a class="btn-link" href="">FAQs & Help</a> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="d-flex flex-column text-start footer-item">
+                            <h4 class="text-light mb-3">Top category</h4>
+                            <a class="btn-link" href="products.html">Cooking Line </a>
+                            <a class="btn-link" href="products.html">Refrigeration Line </a>
+                            <a class="btn-link" href="products.html"products>Preparation Line</a>
+                            <a class="btn-link" href="products.html">Oven line </a>
+                            <a class="btn-link" href="products.html">Backery Line</a>
+                            <!-- <a class="btn-link" href="products.html">International Orders</a> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h4 class="text-light mb-3">Contact</h4>
+                            <p>Address: shams business center,sharjha media city sharjah UAE</p>
+                            <p>Email: sales@fit4kitchen.in</p>
+                            <p>Email: info@fit4kitchen.in</p>
+                            <p>Phone: +971 58 290 8151 <br> </p>
+                            <p style="margin-left: 55px;">+971 56 479 8242</p>
+                            <!-- <p>Payment Accepted</p>
+                            <img src="img/payment.png" class="img-fluid" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>FIT 4 KITCHEN</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 my-auto text-center text-md-end " style="color: #45595B; font-size:0px">
+                        
+                        Designed By <a class="border-bottom" href="https://wexorai.com/" style="color: #45595B; font-size:0px">Wexorai</a> Distributed By <a class="border-bottom" href="https://themewagon.com" style="font-size:0px">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>

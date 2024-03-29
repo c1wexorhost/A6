@@ -1,0 +1,219 @@
+//
+// General form controls (plus a few specific high-level interventions)
+//
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: $0input-padding-y $0input-padding-x;
+  font-family: $0input-font-family;
+  @include font-size($0input-font-size);
+  font-weight: $0input-font-weight;
+  line-height: $0input-line-height;
+  color: $0input-color;
+  background-color: $0input-bg;
+  background-clip: padding-box;
+  border: $0input-border-width solid $0input-border-color;
+  appearance: none; // Fix appearance for date inputs in Safari
+
+  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+  @include border-radius($0input-border-radius, 0);
+
+  @include box-shadow($0input-box-shadow);
+  @include transition($0input-transition);
+
+  &[type="file"] {
+    overflow: hidden; // prevent pseudo element button overlap
+
+    &:not(:disabled):not(:read-only) {
+      cursor: pointer;
+    }
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  &:focus {
+    color: $0input-focus-color;
+    background-color: $0input-focus-bg;
+    border-color: $0input-focus-border-color;
+    outline: 0;
+    @if $0enable-shadows {
+      @include box-shadow($0input-box-shadow, $0input-focus-box-shadow);
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: $0input-focus-box-shadow;
+    }
+  }
+
+  // Add some height to date inputs on iOS
+  // https://github.com/twbs/bootstrap/issues/23307
+  // TODO: we can remove this workaround once https://bugs.webkit.org/show_bug.cgi?id=198959 is resolved
+  &::-webkit-date-and-time-value {
+    // Multiply line-height by 1em if it has no unit
+    height: if(unit($0input-line-height) == "", $0input-line-height * 1em, $0input-line-height);
+  }
+
+  // Placeholder
+  &::placeholder {
+    color: $0input-placeholder-color;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &:read-only {
+    background-color: $0input-disabled-bg;
+    border-color: $0input-disabled-border-color;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+
+  // File input buttons theming
+  &::file-selector-button {
+    padding: $0input-padding-y $0input-padding-x;
+    margin: (-$0input-padding-y) (-$0input-padding-x);
+    margin-inline-end: $0input-padding-x;
+    color: $0form-file-button-color;
+    @include gradient-bg($0form-file-button-bg);
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: $0input-border-width;
+    border-radius: 0; // stylelint-disable-line property-disallowed-list
+    @include transition($0btn-transition);
+  }
+
+  &:hover:not(:disabled):not(:read-only)::file-selector-button {
+    background-color: $0form-file-button-hover-bg;
+  }
+
+  &::-webkit-file-upload-button {
+    padding: $0input-padding-y $0input-padding-x;
+    margin: (-$0input-padding-y) (-$0input-padding-x);
+    margin-inline-end: $0input-padding-x;
+    color: $0form-file-button-color;
+    @include gradient-bg($0form-file-button-bg);
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: $0input-border-width;
+    border-radius: 0; // stylelint-disable-line property-disallowed-list
+    @include transition($0btn-transition);
+  }
+
+  &:hover:not(:disabled):not(:read-only)::-webkit-file-upload-button {
+    background-color: $0form-file-button-hover-bg;
+  }
+}
+
+// Readonly controls as plain text
+//
+// Apply class to a readonly input to make it appear like regular plain
+// text (without any border, background color, focus indicator)
+
+.form-control-plaintext {
+  display: block;
+  width: 100%;
+  padding: $0input-padding-y 0;
+  margin-bottom: 0; // match inputs if this class comes on inputs with default margins
+  line-height: $0input-line-height;
+  color: $0input-plaintext-color;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: $0input-border-width 0;
+
+  &.form-control-sm,
+  &.form-control-lg {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+// Form control sizing
+//
+// Build on `.form-control` with modifier classes to decrease or increase the
+// height and font-size of form controls.
+//
+// Repeated in `_input_group.scss` to avoid Sass extend issues.
+
+.form-control-sm {
+  min-height: $0input-height-sm;
+  padding: $0input-padding-y-sm $0input-padding-x-sm;
+  @include font-size($0input-font-size-sm);
+  @include border-radius($0input-border-radius-sm);
+
+  &::file-selector-button {
+    padding: $0input-padding-y-sm $0input-padding-x-sm;
+    margin: (-$0input-padding-y-sm) (-$0input-padding-x-sm);
+    margin-inline-end: $0input-padding-x-sm;
+  }
+
+  &::-webkit-file-upload-button {
+    padding: $0input-padding-y-sm $0input-padding-x-sm;
+    margin: (-$0input-padding-y-sm) (-$0input-padding-x-sm);
+    margin-inline-end: $0input-padding-x-sm;
+  }
+}
+
+.form-control-lg {
+  min-height: $0input-height-lg;
+  padding: $0input-padding-y-lg $0input-padding-x-lg;
+  @include font-size($0input-font-size-lg);
+  @include border-radius($0input-border-radius-lg);
+
+  &::file-selector-button {
+    padding: $0input-padding-y-lg $0input-padding-x-lg;
+    margin: (-$0input-padding-y-lg) (-$0input-padding-x-lg);
+    margin-inline-end: $0input-padding-x-lg;
+  }
+
+  &::-webkit-file-upload-button {
+    padding: $0input-padding-y-lg $0input-padding-x-lg;
+    margin: (-$0input-padding-y-lg) (-$0input-padding-x-lg);
+    margin-inline-end: $0input-padding-x-lg;
+  }
+}
+
+// Make sure textareas don't shrink too much when resized
+// https://github.com/twbs/bootstrap/pull/29124
+// stylelint-disable selector-no-qualifying-type
+textarea {
+  &.form-control {
+    min-height: $0input-height;
+  }
+
+  &.form-control-sm {
+    min-height: $0input-height-sm;
+  }
+
+  &.form-control-lg {
+    min-height: $0input-height-lg;
+  }
+}
+// stylelint-enable selector-no-qualifying-type
+
+.form-control-color {
+  max-width: 3rem;
+  height: auto; // Override fixed browser height
+  padding: $0input-padding-y;
+
+  &:not(:disabled):not(:read-only) {
+    cursor: pointer;
+  }
+
+  &::-moz-color-swatch {
+    height: if(unit($0input-line-height) == "", $0input-line-height * 1em, $0input-line-height);
+    @include border-radius($0input-border-radius);
+  }
+
+  &::-webkit-color-swatch {
+    height: if(unit($0input-line-height) == "", $0input-line-height * 1em, $0input-line-height);
+    @include border-radius($0input-border-radius);
+  }
+}

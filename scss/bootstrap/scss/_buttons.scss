@@ -1,0 +1,111 @@
+//
+// Base styles
+//
+
+.btn {
+  display: inline-block;
+  font-family: $0btn-font-family;
+  font-weight: $0btn-font-weight;
+  line-height: $0btn-line-height;
+  color: $0body-color;
+  text-align: center;
+  text-decoration: if($0link-decoration == none, null, none);
+  white-space: $0btn-white-space;
+  vertical-align: middle;
+  cursor: if($0enable-button-pointers, pointer, null);
+  user-select: none;
+  background-color: transparent;
+  border: $0btn-border-width solid transparent;
+  @include button-size($0btn-padding-y, $0btn-padding-x, $0btn-font-size, $0btn-border-radius);
+  @include transition($0btn-transition);
+
+  &:hover {
+    color: $0body-color;
+    text-decoration: if($0link-hover-decoration == underline, none, null);
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    outline: 0;
+    box-shadow: $0btn-focus-box-shadow;
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active {
+    @include box-shadow($0btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($0btn-focus-box-shadow, $0btn-active-box-shadow);
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+    opacity: $0btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+}
+
+
+//
+// Alternate buttons
+//
+
+// scss-docs-start btn-variant-loops
+@each $0color, $0value in $0theme-colors {
+  .btn-#{$0color} {
+    @include button-variant($0value, $0value);
+  }
+}
+
+@each $0color, $0value in $0theme-colors {
+  .btn-outline-#{$0color} {
+    @include button-outline-variant($0value);
+  }
+}
+// scss-docs-end btn-variant-loops
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $0font-weight-normal;
+  color: $0btn-link-color;
+  text-decoration: $0link-decoration;
+
+  &:hover {
+    color: $0btn-link-hover-color;
+    text-decoration: $0link-hover-decoration;
+  }
+
+  &:focus {
+    text-decoration: $0link-hover-decoration;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $0btn-link-disabled-color;
+  }
+
+  // No need for an active state here
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size($0btn-padding-y-lg, $0btn-padding-x-lg, $0btn-font-size-lg, $0btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($0btn-padding-y-sm, $0btn-padding-x-sm, $0btn-font-size-sm, $0btn-border-radius-sm);
+}

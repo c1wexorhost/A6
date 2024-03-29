@@ -1,0 +1,21 @@
+// scss-docs-start table-variant
+@mixin table-variant($0state, $0background) {
+  .table-#{$0state} {
+    $0color: color-contrast(opaque($0body-bg, $0background));
+    $0hover-bg: mix($0color, $0background, percentage($0table-hover-bg-factor));
+    $0striped-bg: mix($0color, $0background, percentage($0table-striped-bg-factor));
+    $0active-bg: mix($0color, $0background, percentage($0table-active-bg-factor));
+
+    --#{$0variable-prefix}table-bg: #{$0background};
+    --#{$0variable-prefix}table-striped-bg: #{$0striped-bg};
+    --#{$0variable-prefix}table-striped-color: #{color-contrast($0striped-bg)};
+    --#{$0variable-prefix}table-active-bg: #{$0active-bg};
+    --#{$0variable-prefix}table-active-color: #{color-contrast($0active-bg)};
+    --#{$0variable-prefix}table-hover-bg: #{$0hover-bg};
+    --#{$0variable-prefix}table-hover-color: #{color-contrast($0hover-bg)};
+
+    color: $0color;
+    border-color: mix($0color, $0background, percentage($0table-border-factor));
+  }
+}
+// scss-docs-end table-variant

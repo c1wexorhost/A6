@@ -1,0 +1,68 @@
+// Utility generator
+// Used to generate utilities & print utilities
+@mixin generate-utility($0utility, $0infix, $0is-rfs-media-query: false) {
+  $0values: map-get($0utility, values);
+
+  // If the values are a list or string, convert it into a map
+  @if type-of($0values) == "string" or type-of(nth($0values, 1)) != "list" {
+    $0values: zip($0values, $0values);
+  }
+
+  @each $0key, $0value in $0values {
+    $0properties: map-get($0utility, property);
+
+    // Multiple properties are possible, for example with vertical or horizontal margins or paddings
+    @if type-of($0properties) == "string" {
+      $0properties: append((), $0properties);
+    }
+
+    // Use custom class if present
+    $0property-class: if(map-has-key($0utility, class), map-get($0utility, class), nth($0properties, 1));
+    $0property-class: if($0property-class == null, "", $0property-class);
+
+    // State params to generate pseudo-classes
+    $0state: if(map-has-key($0utility, state), map-get($0utility, state), ());
+
+    $0infix: if($0property-class == "" and str-slice($0infix, 1, 1) == "-", str-slice($0infix, 2), $0infix);
+
+    // Don't prefix if value key is null (eg. with shadow class)
+    $0property-class-modifier: if($0key, if($0property-class == "" and $0infix == "", "", "-") + $0key, "");
+
+    @if map-get($0utility, rfs) {
+      // Inside the media query
+      @if $0is-rfs-media-query {
+        $0val: rfs-value($0value);
+
+        // Do not render anything if fluid and non fluid values are the same
+        $0value: if($0val == rfs-fluid-value($0value), null, $0val);
+      }
+      @else {
+        $0value: rfs-fluid-value($0value);
+      }
+    }
+
+    $0is-rtl: map-get($0utility, rtl);
+
+    @if $0value != null {
+      @if $0is-rtl == false {
+        /* rtl:begin:remove */
+      }
+      .#{$0property-class + $0infix + $0property-class-modifier} {
+        @each $0property in $0properties {
+          #{$0property}: $0value if($0enable-important-utilities, !important, null);
+        }
+      }
+
+      @each $0pseudo in $0state {
+        .#{$0property-class + $0infix + $0property-class-modifier}-#{$0pseudo}:#{$0pseudo} {
+          @each $0property in $0properties {
+            #{$0property}: $0value if($0enable-important-utilities, !important, null);
+          }
+        }
+      }
+      @if $0is-rtl == false {
+        /* rtl:end:remove */
+      }
+    }
+  }
+}

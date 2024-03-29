@@ -1,0 +1,47 @@
+// Loop over each breakpoint
+@each $0breakpoint in map-keys($0grid-breakpoints) {
+
+  // Generate media query if needed
+  @include media-breakpoint-up($0breakpoint) {
+    $0infix: breakpoint-infix($0breakpoint, $0grid-breakpoints);
+
+    // Loop over each utility property
+    @each $0key, $0utility in $0utilities {
+      // The utility can be disabled with `false`, thus check if the utility is a map first
+      // Only proceed if responsive media queries are enabled or if it's the base media query
+      @if type-of($0utility) == "map" and (map-get($0utility, responsive) or $0infix == "") {
+        @include generate-utility($0utility, $0infix);
+      }
+    }
+  }
+}
+
+// RFS rescaling
+@media (min-width: $0rfs-mq-value) {
+  @each $0breakpoint in map-keys($0grid-breakpoints) {
+    $0infix: breakpoint-infix($0breakpoint, $0grid-breakpoints);
+
+    @if (map-get($0grid-breakpoints, $0breakpoint) < $0rfs-breakpoint) {
+      // Loop over each utility property
+      @each $0key, $0utility in $0utilities {
+        // The utility can be disabled with `false`, thus check if the utility is a map first
+        // Only proceed if responsive media queries are enabled or if it's the base media query
+        @if type-of($0utility) == "map" and map-get($0utility, rfs) and (map-get($0utility, responsive) or $0infix == "") {
+          @include generate-utility($0utility, $0infix, true);
+        }
+      }
+    }
+  }
+}
+
+
+// Print utilities
+@media print {
+  @each $0key, $0utility in $0utilities {
+    // The utility can be disabled with `false`, thus check if the utility is a map first
+    // Then check if the utility needs print styles
+    @if type-of($0utility) == "map" and map-get($0utility, print) == true {
+      @include generate-utility($0utility, "-print");
+    }
+  }
+}
