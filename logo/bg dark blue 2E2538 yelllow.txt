@@ -1,2 +1,0 @@
-bg-dark blue - #2E2538
-yelllow - #DCB342
